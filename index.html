@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
+    <!-- fontaesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwind custom css  -->
     <script>
         tailwind.config = {
@@ -22,6 +26,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'primary-color': '#F85559',
                     }
                 }
             }
@@ -36,7 +41,72 @@
 
 </head>
 
-<body>
+<body class="font-lato">
+    <!-- header section -->
+    <header>
+        <!-- navbar part -->
+        <nav class="container mx-auto md:px-5 lg:px-0">
+            <div class="navbar md:bg-primary-color mt-10 py-2 rounded-full">
+                <div class="navbar-start hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white md:text-lg">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-center w-full lg:w-auto">
+                    <div class="flex flex-row-reverse justify-between w-full">
+                        <!-- navbar icon /dropdown box-->
+                        <div class="dropdown flex items-center justify-end">
+                            <label tabindex="0" class="btn btn-square btn-ghost lg:hidden">
+                                <i class="fa-solid fa-bars text-2xl md:text-white"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    class="inline-block w-5 h-5 stroke-current text-xl">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg> -->
+                            </label>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-28 text-white z-[1] p-2 shadow bg-gray-600 rounded-box w-40">
+                                <li><a>Home</a></li>
+                                <li><a>About Us</a></li>
+                                <li><a>Shop</a></li>
+                                <li><a>All Fruits</a></li>
+                            </ul>
+                        </div>
+                        <!-- logo -->
+                        <div class="flex items-center flex-1">
+                            <img src="./images/logo.png" alt="">
+                            <p>
+                                <a class="btn btn-ghost normal-case text-3xl text-gray-950 md:text-white font-bold">Fruit
+                                    Burst</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex navbar-end mr-2 relative">
+                    <input type="text" placeholder="Search here"
+                        class="input input-bordered w-full max-w-xs rounded-full" />
+                    <button class="absolute right-4">
+                        <i class="fa-solid fa-magnifying-glass text-lg text-gray-400 "></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main section -->
+    <main>
+
+    </main>
+
+    <!-- footer section -->
+    <footer>
+
+    </footer>
 
 </body>
 
