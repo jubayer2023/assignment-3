@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
     <!-- tailwind custom css  -->
     <script>
         tailwind.config = {
@@ -37,18 +39,28 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.6);
+        }
     </style>
 
 </head>
 
 <body class="font-lato">
     <!-- header section -->
-    <header>
+    <header class="container mx-auto">
         <!-- navbar part -->
-        <nav class="container mx-auto md:px-5 lg:px-0">
+        <nav class="px-5 lg:px-0">
             <div class="navbar md:bg-primary-color mt-10 py-2 rounded-full">
                 <div class="navbar-start hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 text-white md:text-lg">
+                    <ul class="menu menu-horizontal px-1 text-white md:text-sm font-semibold">
                         <li><a>Home</a></li>
                         <li><a>About Us</a></li>
                         <li><a>Shop</a></li>
@@ -96,6 +108,131 @@
                 </div>
             </div>
         </nav>
+        <!-- banner part -->
+        <div class="px-5 lg:px-0 mt-12 z-0 relative">
+            <div class="carousel w-full h-[300px] md:h-[500px]">
+                <!-- first slide -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./images/banner1.png" class="w-full rounded-lg" />
+                    <div class="image-overlay flex justify-center items-center rounded-lg">
+                        <div class="text-white text-sm max-w-screen-md mx-auto text-center space-y-3 mb-10">
+                            <h2 class="text-3xl md:text-6xl text-white font-extrabold">
+                                Exotic tastes at your <br>doorstep
+                            </h2>
+                            <p class="font-semibold text-gray-300 text-sm pb-2">
+                                We supply highly quality organic products
+                            </p>
+                            <p>
+                                <button
+                                    class="btn bg-primary-color text-white text-sm md:text-lg font-semibold capitalize border-none">Shop
+                                    Now</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle bg-gray-950 border-none text-white">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-gray-950 border-none text-white">❯</a>
+                    </div>
+                </div>
+                <!-- second slide -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="./images/banner2.png" class="w-full rounded-lg" />
+                    <div class="image-overlay flex justify-center items-center rounded-lg">
+                        <div class="text-white text-sm max-w-screen-md mx-auto text-center space-y-3 mb-10">
+                            <h2 class="text-3xl md:text-6xl text-white font-extrabold">
+                                Exotic tastes at your <br>doorstep
+                            </h2>
+                            <p class="font-semibold text-gray-300 text-sm pb-2">
+                                We supply highly quality organic products
+                            </p>
+                            <p>
+                                <button
+                                    class="btn bg-primary-color text-white text-sm md:text-lg font-semibold capitalize border-none">Shop
+                                    Now</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-gray-950 border-none text-white">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-gray-950 border-none text-white">❯</a>
+                    </div>
+                </div>
+                <!-- third slide -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="./images/banner3.png" class="w-full rounded-lg" />
+                    <div class="image-overlay flex justify-center items-center rounded-lg">
+                        <div class="text-white text-sm max-w-screen-md mx-auto text-center space-y-3 mb-10">
+                            <h2 class="text-3xl md:text-6xl text-white font-extrabold">
+                                Exotic tastes at your <br>doorstep
+                            </h2>
+                            <p class="font-semibold text-gray-300 text-sm pb-2">
+                                We supply highly quality organic products
+                            </p>
+                            <p>
+                                <button
+                                    class="btn bg-primary-color text-white text-sm md:text-lg font-semibold capitalize border-none">Shop
+                                    Now</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-gray-950 border-none text-white">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-gray-950 border-none text-white">❯</a>
+                    </div>
+                </div>
+                <!-- fourth slide -->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="./images/banner4.png" class="w-full rounded-lg" />
+                    <div class="image-overlay flex justify-center items-center rounded-lg">
+                        <div class="text-white text-sm max-w-screen-md mx-auto text-center space-y-3 mb-10">
+                            <h2 class="text-3xl md:text-6xl text-white font-extrabold">
+                                Exotic tastes at your <br>doorstep
+                            </h2>
+                            <p class="font-semibold text-gray-300 text-sm pb-2">
+                                We supply highly quality organic products
+                            </p>
+                            <p>
+                                <button
+                                    class="btn bg-primary-color text-white text-sm md:text-lg font-semibold capitalize border-none">Shop
+                                    Now</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-gray-950 border-none text-white">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-gray-950 border-none text-white">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- bonus part -->
+            <div class="hidden md:hidden lg:block w-full z-20 absolute -bottom-14">
+                <!-- bonus container -->
+                <div
+                    class="flex justify-around items-center bg-white py-8 border-none rounded-xl shadow-xl w-[880px] mx-auto">
+                    <div class="text-center text-gray-500 font-semibold space-y-2">
+                        <img src="./images/fruit1.png" class="w-[100px]" alt="">
+                        <p>Strawberry</p>
+                    </div>
+                    <div class="text-center text-gray-500 font-semibold ">
+                        <img src="./images/fruit2.png" class="w-[85px]" alt="">
+                        <p>Orange</p>
+                    </div>
+                    <div class="text-center text-gray-500 font-semibold space-y-2">
+                        <img src="./images/fruit3.png" class="w-[100px]" alt="">
+                        <p>Mango</p>
+                    </div>
+                    <div class="text-center text-gray-500 font-semibold space-y-2">
+                        <img src="./images/fruit4.png" class="w-[100px]" alt="">
+                        <p>Strawberry</p>
+                    </div>
+                    <div class="text-center text-gray-500 font-semibold space-y-2">
+                        <img src="./images/fruit5.png" class="w-[100px]" alt="">
+                        <p>Mango</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- main section -->
